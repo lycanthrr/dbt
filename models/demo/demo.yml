@@ -1,0 +1,24 @@
+# Very important to do indentation in dbt, because if the indentation is off it won't work
+
+version: 2
+
+models:
+  - name: employee
+    description: "Employee DBT model"
+    columns:
+      - name: EMP_ID
+        data_tests:
+          - unique
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['1', '2', '3', '4', '5']
+                config:
+                  severity: warn
+
+sources:
+  - name: employee
+    database: DBT_DB
+    schema: PUBLIC
+    tables: 
+      - name: EMPLOYEE_RAW
