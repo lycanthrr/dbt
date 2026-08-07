@@ -40,4 +40,7 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: table
+<<<<<<< HEAD
 
+=======
+>>>>>>> 60870a60af944118121fcf7dc027bfeb72b79fbe
