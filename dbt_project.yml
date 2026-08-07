@@ -38,10 +38,10 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   dlln_dbt_workshop:
     example:
-      schema: 'example'
+      +schema: example
     silver:
-      schema: 'silver'
-      materialized: 'table'
+      +schema: silver
+      +materialized: table
     gold:
-      schema: 'gold'
-      materialized: 'view'
+      +schema: gold
+      +materialized: view
