@@ -1,4 +1,4 @@
-% macro macros_copy_csv(table_nm) %} 
+{% macro macros_copy_csv(table_nm) %} 
 
  
 
