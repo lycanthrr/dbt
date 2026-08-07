@@ -1,8 +1,0 @@
-version: 2
-
-sources:
-  - name: bronze
-    database: REEL_DB
-    schema: BRONZE
-    tables:
-      - name: product_dim
