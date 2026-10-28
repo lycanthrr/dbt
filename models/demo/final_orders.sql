@@ -11,7 +11,7 @@ with clean_orders as (
         CUSTOMER_ID,
         CUSTOMER_NAME,
         CREATED_AT,
-        CURRENT_TIMESTAMP AS INSERT_DTS,
+        CURRENT_TIMESTAMP AS INSERT_DTS
     from {{ ref('clean_orders') }}
 )
 select * from clean_orders
