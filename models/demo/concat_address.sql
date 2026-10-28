@@ -4,4 +4,4 @@
         materialized = 'table'
     )
 }}
-select {{ concat_macro('117Street','Hendertucky') }} as address
+select {{ concat_macro('street','katmandhu') }} as address
