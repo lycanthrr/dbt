@@ -17,7 +17,7 @@ with product_src as (
     from {{source('product','PRODUCT_SRC')}}
 
     {% if is_incremental() %}
-    where CREATED_AT > (select MAX(INSERT_DTS) from {{this}})
+    where CREATED_AT >= (select dateadd(hour, -1, MAX(CREATED_AT)) from {{this}})
     {% endif %}
 )
 
